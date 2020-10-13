@@ -21,10 +21,12 @@ namespace Pokladna
 
         private void Form_Load(object sender,EventArgs e)
         {
-            repositar = new JasonRepos();
-            repositar = new SqlRepos();
-            repositar = new XmlRepos();
-            pokladna = repositar.NactiVse();
+            JasonRepos jsonRepos = new JasonRepos("data.json");
+            jsonRepos.VytvorData();
+            repositar = jsonRepos;
+            //repositar = new SqlRepos();
+            //repositar = new XmlRepos();
+            //pokladna = repositar.NactiVse();
         }
  }
 }
