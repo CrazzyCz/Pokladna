@@ -18,17 +18,17 @@ namespace Pokladna
             throw new NotImplementedException();
         }
 
-        public void SmazZaznam(PoklZaznam poklZaznam)
+        public void SmazZaznam(PoklZaznam pokladniZaznam)
         {
             throw new NotImplementedException();
         }
 
-        public void UpravZaznam(PoklZaznam poklZaznam)
+        public void UpravZaznam(PoklZaznam pokladniZaznam)
         {
             throw new NotImplementedException();
         }
 
-        public PoklZaznam VytvorZaznam(PoklZaznam poklZaznam)
+        public PoklZaznam VytvorZaznam(PoklZaznam pokladniZaznam)
         {
             throw new NotImplementedException();
         }

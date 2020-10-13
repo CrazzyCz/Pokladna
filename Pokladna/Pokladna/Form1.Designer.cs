@@ -28,115 +28,106 @@
   /// </summary>
   private void InitializeComponent()
   {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.datumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.čísloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.popisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.výdajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.příjmyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zůstatekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.poznámkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lvData = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // listView1
+            // panel1
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 24);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(800, 426);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(526, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(274, 450);
+            this.panel1.TabIndex = 1;
             // 
-            // menuStrip1
+            // lvData
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datumToolStripMenuItem,
-            this.čísloToolStripMenuItem,
-            this.popisToolStripMenuItem,
-            this.výdajeToolStripMenuItem,
-            this.příjmyToolStripMenuItem,
-            this.zůstatekToolStripMenuItem,
-            this.poznámkaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.lvData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
+            this.lvData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvData.GridLines = true;
+            this.lvData.HideSelection = false;
+            this.lvData.Location = new System.Drawing.Point(0, 0);
+            this.lvData.Margin = new System.Windows.Forms.Padding(2);
+            this.lvData.Name = "lvData";
+            this.lvData.Size = new System.Drawing.Size(526, 450);
+            this.lvData.TabIndex = 2;
+            this.lvData.UseCompatibleStateImageBehavior = false;
+            this.lvData.View = System.Windows.Forms.View.Details;
             // 
-            // datumToolStripMenuItem
+            // columnHeader1
             // 
-            this.datumToolStripMenuItem.Name = "datumToolStripMenuItem";
-            this.datumToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.datumToolStripMenuItem.Text = "Datum";
+            this.columnHeader1.Text = "Datum";
             // 
-            // čísloToolStripMenuItem
+            // columnHeader2
             // 
-            this.čísloToolStripMenuItem.Name = "čísloToolStripMenuItem";
-            this.čísloToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.čísloToolStripMenuItem.Text = "Číslo";
+            this.columnHeader2.Text = "Č. dokladu";
+            this.columnHeader2.Width = 97;
             // 
-            // popisToolStripMenuItem
+            // columnHeader3
             // 
-            this.popisToolStripMenuItem.Name = "popisToolStripMenuItem";
-            this.popisToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.popisToolStripMenuItem.Text = "Popis";
+            this.columnHeader3.Text = "Popis";
+            this.columnHeader3.Width = 290;
             // 
-            // výdajeToolStripMenuItem
+            // columnHeader4
             // 
-            this.výdajeToolStripMenuItem.Name = "výdajeToolStripMenuItem";
-            this.výdajeToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.výdajeToolStripMenuItem.Text = "Výdaje";
+            this.columnHeader4.Text = "Příjmy";
+            this.columnHeader4.Width = 95;
             // 
-            // příjmyToolStripMenuItem
+            // columnHeader5
             // 
-            this.příjmyToolStripMenuItem.Name = "příjmyToolStripMenuItem";
-            this.příjmyToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.příjmyToolStripMenuItem.Text = " Příjmy";
+            this.columnHeader5.Text = "Výdaje";
+            this.columnHeader5.Width = 114;
             // 
-            // zůstatekToolStripMenuItem
+            // columnHeader6
             // 
-            this.zůstatekToolStripMenuItem.Name = "zůstatekToolStripMenuItem";
-            this.zůstatekToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.zůstatekToolStripMenuItem.Text = "Zůstatek";
+            this.columnHeader6.Text = "Zůstatek";
+            this.columnHeader6.Width = 146;
             // 
-            // poznámkaToolStripMenuItem
+            // columnHeader7
             // 
-            this.poznámkaToolStripMenuItem.Name = "poznámkaToolStripMenuItem";
-            this.poznámkaToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.poznámkaToolStripMenuItem.Text = "Poznámka";
+            this.columnHeader7.Text = "Poznámka";
+            this.columnHeader7.Width = 192;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.lvData);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
   }
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem datumToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem čísloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem popisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem výdajeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem příjmyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zůstatekToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem poznámkaToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView lvData;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }
 
