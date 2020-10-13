@@ -28,9 +28,11 @@ namespace Pokladna
 
             File.WriteAllText(datovySoubor, json);
         }
-        public List<PoklZaznam> NactiVse()
+
+        public List<PoklZaznam>NactiVse()
         {
-            throw new NotImplementedException();
+            List<PoklZaznam> data;
+            return data = JsonConvert.DeserializeObject<List<PoklZaznam>>(File.ReadAllText(datovySoubor));
         }
 
         public PoklZaznam NactiZaznam(int idPokladniZaznam)
