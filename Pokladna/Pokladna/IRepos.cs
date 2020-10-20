@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Pokladna
 {
-    public interface IRepos
-    {
-       List<PoklZaznam> NactiVse();
-        PoklZaznam NactiZaznam(int idPokladniZaznam);
-        PoklZaznam VytvorZaznam(PoklZaznam poklZaznam);
-        void UpravZaznam(PoklZaznam poklZaznam);
-        void SmazZaznam(PoklZaznam poklZaznam);
-    }
+ public interface IRepos
+ {
+  List<PokladniZaznam> NactiVse();
+  PokladniZaznam NactiZaznam(int idPokladniZaznam);
+  PokladniZaznam VytvorZaznam(PokladniZaznam pokladniZaznam);
+  void UpravZaznam(PokladniZaznam pokladniZaznam);
+  void SmazZaznam(PokladniZaznam pokladniZaznam);
+ }
 }
