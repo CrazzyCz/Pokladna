@@ -16,12 +16,19 @@ namespace Pokladna
   public double Castka { get; set; }
   public double Zustatek { get; set; }
   public string Poznamka { get; set; }
+        public int V1 { get; }
+        public int V2 { get; }
+        public DateTime DateTime { get; }
+        public string V3 { get; }
+        public double V4 { get; }
+        public double V5 { get; }
+        public string V6 { get; }
 
-  public PokladniZaznam()
+        public PokladniZaznam()
   {
   }
 
-  public PokladniZaznam(int idPokladniZaznam, int cislo, DateTime datum, string popis, double castka, double zustatek, string poznamka)
+  public PokladniZaznam(int idPokladniZaznam, int cislo, object v, DateTime datum, string popis, double castka, double zustatek, string poznamka)
   {
    IdPokladniZaznam = idPokladniZaznam;
    Cislo = cislo;
@@ -43,7 +50,18 @@ namespace Pokladna
    Poznamka = poznamka;
   }
 
-  public ListViewItem DoLvItem()
+        public PokladniZaznam(int v1, int v2, DateTime dateTime, string v3, double v4, double v5, string v6)
+        {
+            V1 = v1;
+            V2 = v2;
+            DateTime = dateTime;
+            V3 = v3;
+            V4 = v4;
+            V5 = v5;
+            V6 = v6;
+        }
+
+        public ListViewItem DoLvItem()
   {
    if (Castka > 0)
    {
