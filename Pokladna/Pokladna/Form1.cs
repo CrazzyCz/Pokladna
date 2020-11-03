@@ -23,8 +23,9 @@ namespace Pokladna
   private void Form1_Load(object sender, EventArgs e)
   {
    JsonRepos jsonRepos = new JsonRepos("data.json");
-   //jsonRepos.VytvorTestData();
-   repositar = jsonRepos;
+            //jsonRepos.VytvorTestData();
+            SqlRepos sqlRepos = new SqlRepos();
+            repositar = jsonRepos;
 
    cBoxRok.SelectedIndex = cBoxRok.Items.IndexOf(DateTime.Now.Year.ToString());
    cBoxMesic.SelectedIndex = DateTime.Now.Month - 1;
@@ -32,7 +33,8 @@ namespace Pokladna
 
   private void cBoxRok_SelectedIndexChanged(object sender, EventArgs e)
   {
-   NactiDataAktMesic();
+            repositar.NactiVse();
+   //NactiDataAktMesic();
   }
 
   private void NactiDataAktMesic()

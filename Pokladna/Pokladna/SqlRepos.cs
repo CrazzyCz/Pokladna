@@ -1,41 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Pokladna
 {
- public class SqlRepos : IRepos
- {
-  public List<PokladniZaznam> NactiMesic(int rok, int mesic)
-  {
-   throw new NotImplementedException();
-  }
+    public class SqlRepos : IRepos
+    {
 
-  public List<PokladniZaznam> NactiVse()
-  {
-   throw new NotImplementedException();
-  }
+        private string connstring=(@"Data Source=(localdb)\MSSQLLocalDB;
+                                                      Initial Catalog=master;
+                                                      Integrated Security=True;
+                                                      Connect Timeout=30;
+                                                      Encrypt=False;
+                                                      TrustServerCertificate=False;
+                                                      ApplicationIntent=ReadWrite;
+                                                      MultiSubnetFailover=False");
 
-  public PokladniZaznam NactiZaznam(int idPokladniZaznam)
-  {
-   throw new NotImplementedException();
-  }
+        public void VytvorTestData()
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(connstring))
+            {
+                string dotaz = "DROP TABLE IF EXISTS   [dbo].[Table]" +
+                    "CREATE TABLE [dbo].[Table]" +
+                    "(IdPokladniZaznam] INT NOT NULL PRIMARY KEY,  " +
+                    "[Cislo] INT NOT NULL," +
+                    " [Datum] DATETIME NOT NULL, " +
+                    "[Popis] VARCHAR(250) NOT NULL," +
+                    " [Castka] INT NOT NULL, " +
+                    "[Zustatek] FLOAT NOT NULL," +
+                    " [Poznamka] VARCHAR(250) NOT NULL)";
+                using (SqlCommand sqlCommand = new SqlCommand(dotaz, sqlConnection))
+                {
+                    sqlConnection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    sqlConnection.Close();
+                }
+            }
+        }
+        public List<PokladniZaznam> NactiMesic(int rok, int mesic)
+        {
+            throw new NotImplementedException();
+        }
 
-  public void SmazZaznam(PokladniZaznam pokladniZaznam)
-  {
-   throw new NotImplementedException();
-  }
+        public List<PokladniZaznam> NactiVse()
+        {
+            List<PokladniZaznam> result = new List<PokladniZaznam>();
+            using(SqlConnection sqlConnection= new SqlConnection(connstring))
+            {
+                sqlConnection.Open();
+                sqlConnection.Close();
+            }
+            return result;
+        }
 
-  public void UpravZaznam(PokladniZaznam pokladniZaznam)
-  {
-   throw new NotImplementedException();
-  }
+        public PokladniZaznam NactiZaznam(int idPokladniZaznam)
+        {
+            throw new NotImplementedException();
+        }
 
-  public PokladniZaznam VytvorZaznam(PokladniZaznam pokladniZaznam)
-  {
-   throw new NotImplementedException();
-  }
- }
+        public void SmazZaznam(PokladniZaznam pokladniZaznam)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpravZaznam(PokladniZaznam pokladniZaznam)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PokladniZaznam VytvorZaznam(PokladniZaznam pokladniZaznam)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
